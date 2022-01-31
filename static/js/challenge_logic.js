@@ -208,6 +208,8 @@ legend.onAdd = function() {
 d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function(platedata) {
     L.geoJson(platedata, {
       color: "blue",
-      weight: 1}).addTo(map);
+      weight: 1}).addTo(tectonicplates);
+      
+      tectonicplates.addTo(map);
 });
 
